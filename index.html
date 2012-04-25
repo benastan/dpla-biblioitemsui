@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="css/base.css" />
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/underscore.js"></script>
+		<script type="text/javascript" src="js/backbone.js"></script>
+		<script type="text/javascript" src="js/base.js"></script>
+	</head>
+	<body>
+		<div id="container" class="no-search">
+			<header>
+				<h1>Search Harvard's Open Metadata</h1>
+			</header>
+			<input type="text" id="searchBox" />
+			<section id="results-container">
+				<div class="no-results"><strong>That's a 404.</strong> Sorry, no results!</div>
+				<div class="results"></div>
+			</div>
+			<footer class="pagination">
+				<div class="floatleft"><span id="query info"></div>
+				<div class="floatright">
+					<span class="page-number"></span>
+					<span class="page-total"></span>
+					<span class="previous-page">&larr; previous</span>
+					<span class="next-page">next &rarr;</span>
+				</div>
+			</div>
+		</div>
+		<script type="text/erb" id="SearchResultViewTemplate">
+			<h2><%= title %></h2>
+			<% _.each(attributes, function(val, attr) { %>
+			<div class="attr">
+				<label><%= attr %></label>
+				<span><%= val %>
+			</div>
+			<% }) %>
+			<div class="originalFieldsContainer">
+				<div class="show toggle">
+					Show fields
+				</div>
+				<div class="hide toggle">
+					Hide fields
+				</div>
+				<div class="originalFields">
+					<% _.each(originalFields, function(val, attr) { %>	
+					<div class="attr">
+						<label><%= attr %></label>
+						<span><%= val %>
+					</div>
+					<% }) %>
+				</div>
+				<div class="hide toggle">
+					Hide fields
+				</div>
+			</div>
+		</script>
+	</body>
+</html>

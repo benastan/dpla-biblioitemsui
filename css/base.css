@@ -1,0 +1,108 @@
+html, body
+{
+	font-family: georgia;
+	margin: 0;
+	background: url('//static.duesome.benjaminbergstein.com/img/app-bg.png') repeat top left;
+}
+
+ul, li
+{
+	list-style:none;
+	margin: 0;
+	padding: 0;
+}
+
+.floatleft {float:left;}
+.floatright {float:right;}
+
+#container
+{
+	width: 750px;
+	margin: 0 auto;
+}
+
+#container.no-search
+{
+	margin-top: 10%;
+}
+
+#searchBox
+{
+	width: 98%;
+	box-shadow: inset 0 0 22px -10px black;
+	-webkit-appearance: none;
+	border: 1px solid #CCC;
+	padding: 3px 1% 6px;
+	font-size: 2em;
+	color: #444;
+	font-family: georgia;
+	outline: 0;
+	background: rgba(255, 255, 255, .3);
+}
+
+#searchBox:focus
+{
+	background: rgba(255, 255, 255, .6);
+}
+
+.search-result
+{
+	box-shadow: 0 0 13px -5px black;
+	padding: 7px;
+	margin: 10px 0;
+	background: rgba(255, 255, 255, .6);
+}
+
+.no-results
+{
+	margin: 5px 0 0;
+	display: none;
+	background: rgba(255, 230, 230, .4);
+	padding: 5px;
+	border: 1px solid rgba(230, 200, 200, .8);
+	font-size: .8em;
+	font-family: lucida grande;
+}
+
+.search-result h2
+{
+	margin: 0 0 5px;
+	font-size: 1.2em;
+}
+
+.search-result .attr
+{
+	margin: 8px 0;
+}
+
+.search-result .attr label
+{
+	background: #eef;
+	border-radius: 15px;
+	padding: 2px 6px;
+	font-size: .8em;
+	font-family: lucida grande;
+}
+
+.search-result .originalFieldsContainer
+{
+	padding: 3px;
+	margin: 3px;
+}
+
+.search-result .originalFields
+{
+	display: none;
+}
+
+.search-result .originalFieldsContainer .toggle
+{
+	cursor: pointer;
+	background: rgba(230, 230, 255, .4);
+	text-align: center;
+}
+
+.search-result .originalFieldsContainer .toggle.hide
+{
+	display: none;
+}
