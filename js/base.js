@@ -15,7 +15,11 @@
 			},
 			get: function(attr) {
 				var value = b.Model.prototype.get.apply(this, ['dpla.'+attr]);
-				return value ? value : b.Model.prototype.get.apply(this, arguments);
+				value = (value ? value : b.Model.prototype.get.apply(this, arguments));
+				if (typeof value === 'string') {
+					value = value.replace(/\\\'/g, '\'').replace(/\\"/g, '"');
+				}
+				return value;
 			},
 			origFields: function() {
 				return this.parseFields(function(val, key) {

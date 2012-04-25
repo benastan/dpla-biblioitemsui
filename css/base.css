@@ -5,6 +5,16 @@ html, body
 	background: url('//static.duesome.benjaminbergstein.com/img/app-bg.png') repeat top left;
 }
 
+a
+{
+	color: #669;
+}
+
+a:hover
+{
+	color: #88a;
+}
+
 ul, li
 {
 	list-style:none;

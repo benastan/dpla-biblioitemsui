@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<title>Search Harvard's Open Metadata</title>
 		<link type="text/css" rel="stylesheet" href="css/base.css" />
 		<script type="text/javascript" src="js/jquery.js"></script>
 		<script type="text/javascript" src="js/underscore.js"></script>
@@ -11,8 +12,10 @@
 		<div id="container" class="no-search">
 			<header>
 				<h1>Search Harvard's Open Metadata</h1>
+				<p>On April 25, 2012, Harvard University made over 12 million catalog records publicly available. Using this page, I hope you will have fun searching the database!</p>
+				<p>If you have ideas for how to mash up this data, <a href="mailto:dpla@benjaminbergstein.com">let me know</a></p>
 			</header>
-			<input type="text" id="searchBox" />
+			<input type="text" id="searchBox" placeholder="Search over 12 million records" />
 			<section id="results-container">
 				<div class="no-results"><strong>That's a 404.</strong> Sorry, no results!</div>
 				<div class="results"></div>
@@ -22,8 +25,8 @@
 				<div class="floatright">
 					<span class="page-number"></span>
 					<span class="page-total"></span>
-					<span class="previous-page">&larr; previous</span>
-					<span class="next-page">next &rarr;</span>
+					<!--<span class="previous-page">&larr; previous</span>
+					<span class="next-page">next &rarr;</span>-->
 				</div>
 			</div>
 		</div>
